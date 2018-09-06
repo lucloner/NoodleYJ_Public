@@ -8,3 +8,15 @@
 	path = android_baiduFaceSDK_apk_1.01
 	url = https://github.com/lucloner/baiduFaceSDK.git
 	branch = 1_01
+[submodule "vcpp_ipmsg_offical"]
+	path = vcpp_ipmsg_offical
+	url = https://github.com/lucloner/ipmsg-1.git
+[submodule "python3_ipmsg_console"]
+	path = python3_ipmsg_console
+	url = https://github.com/lucloner/ipmsg.git
+[submodule "js_ipmsg_untested"]
+	path = js_ipmsg_untested
+	url = https://github.com/lucloner/ipmsg.js.git
+[submodule "macOS_ipmsg_untested"]
+	path = macOS_ipmsg_untested
+	url = https://github.com/lucloner/IPMessenger-for-Mac.git
