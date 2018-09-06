@@ -1,0 +1,10 @@
+[submodule "android_ipmsg_apk"]
+	path = android_ipmsg_apk
+	url = https://github.com/lucloner/IPMsg4Android.git
+[submodule "win_ipmsg_dotnet2"]
+	path = win_ipmsg_dotnet2
+	url = https://github.com/lucloner/IpMsg.Net.git
+[submodule "android_baiduFaceSDK_apk_1.01"]
+	path = android_baiduFaceSDK_apk_1.01
+	url = https://github.com/lucloner/baiduFaceSDK.git
+	branch = 1_01
