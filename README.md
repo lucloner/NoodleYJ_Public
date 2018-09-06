@@ -1,4 +1,4 @@
-# NoodleYJ_Public
+# 昱瑾人脸识别系统公开接口
 文件列表：
 
 百度人脸识别SDK源码 android_baiduFaceSDK_apk_1.01 @ e5eae7f	
