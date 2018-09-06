@@ -3,7 +3,7 @@
 
 	百度人脸识别SDK源码	android_baiduFaceSDK_apk_1.01 @ e5eae7f	
 
-	安卓版通讯协议_	android_ipmsg_apk @ 628581a	
+	安卓版通讯协议__	android_ipmsg_apk @ 628581a	
 
 	js版通讯协议（未测试）	js_ipmsg_untested @ 7af0b86	
 
