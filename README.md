@@ -9,7 +9,7 @@
 
 	macOS版通讯协议（未测试）	macOS_ipmsg_untested @ e3e246f	
 
-	python3版通讯协议（控制台字符界面）	python3_ipmsg_console @ 742e50d	
+	python3版通讯协议（字符界面）	python3_ipmsg_console @ 742e50d	
 
 	原作者通讯协议____	vcpp_ipmsg_offical @ fbc0138
 
