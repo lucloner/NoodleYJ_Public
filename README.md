@@ -11,14 +11,14 @@
 
 	python3版通讯协议（控制台字符界面）	python3_ipmsg_console @ 742e50d	
 
-	原作者通讯协议_	vcpp_ipmsg_offical @ fbc0138
+	原作者通讯协议____	vcpp_ipmsg_offical @ fbc0138
 
-	c#版通讯协议_	win_ipmsg_dotnet2 @ 4359ab1
+	c#版通讯协议_____	win_ipmsg_dotnet2 @ 4359ab1
 
-	引用关系信息__	.gitmodules
+	引用关系信息______	.gitmodules
 
 	通讯协议之操作命令与回复	NoodleYJ测试协议.docx	
 
-	未完成版说明书_	NoodleYJ说明书_内测.docx
+	未完成版说明书____	NoodleYJ说明书_内测.docx
 
-	基础通讯协议__	ipmsg协议-基础.docx
+	基础通讯协议______	ipmsg协议-基础.docx
