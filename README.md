@@ -11,7 +11,7 @@
 
 	py3版通讯协议（字符界面）	python3_ipmsg_console @ 742e50d	
 
-	原作者通讯协议____	vcpp_ipmsg_offical @ fbc0138
+	原创作者源码______	vcpp_ipmsg_offical @ fbc0138
 
 	c#版通讯协议_____	win_ipmsg_dotnet2 @ 4359ab1
 
