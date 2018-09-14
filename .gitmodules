@@ -20,3 +20,6 @@
 [submodule "macOS_ipmsg_untested"]
 	path = macOS_ipmsg_untested
 	url = https://github.com/lucloner/IPMessenger-for-Mac.git
+[submodule "android_baiduFaceSDK_apk"]
+	path = android_baiduFaceSDK_apk
+	url = https://github.com/lucloner/baiduFaceSDK.git
