@@ -1,0 +1,56 @@
+﻿NoodleYJ PC二次开发接口_内部征集版
+NoodleYJ是我公司人脸识别系统，其中本文阐述的是电脑端（服务端）二次开发接口。
+1.结构
+安卓--->基于ipmsg的通讯协议--->电脑端--->System.Windows.Forms.WebBrowser（C#）--->chat.js
+2.调用示例
+C#调用：
+	void menuCopy_Click(object sender, EventArgs e)
+	{
+			browser.InvokeScript("copyText");
+	}
+chat.js内容：
+	function copyText() {
+	    document.execCommand("copy"); // 执行浏览器复制命令
+	    window.external.menuCopied("成功");
+	}
+C#回调:
+	public void menuCopied(string text)
+	{
+			SendMessage("复制到剪贴板:" + text);
+	}
+3.方法列表(未完成)
+js方法
+	messageReceied
+	fileSendingPre
+	messageSend
+	absenceModeChange
+	nickNameChange
+	absenceModeChange
+	clearChatHistory
+	copyText
+	clearFileSendPreDiv
+	fileSendingStateChange
+	fileRecvStateChange
+	fileSendingProgressChange
+	fileRecvProgressChange
+	fileSendingRequest
+	fileRecvRequest
+	fileSendingExpired
+	fileSendingStateChange
+	fileSendingTaskFinished
+	fileRecvTaskFinished
+	fileRecvStateChange
+	fileOpError
+	fileSendingDiscard
+	receiveFileRequired
+相关C#方法
+	SendOpenSignal
+	SubmitFileSend
+	ClearFileSendQueue
+	SelectSetSaveFolder
+	CancelFileReceive
+	SubmitFileReceive
+menuCopied
+ProcTables
+
+
