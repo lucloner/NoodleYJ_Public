@@ -2,6 +2,11 @@
 if "%1"=="" goto :help
 if "%2"=="" goto :help
 if not exist platform-tools\adb.exe goto :help
+echo 即将安装文件,由于安装包较大需要刷新临时目录
+echo 请确定机器已经重启过,安装出现错误信息可重试
+echo 网络安装出现错误后可能需要U盘导入NoodleYJ.apk
+echo 按Ctrl+C终止..
+pause
 platform-tools\adb root
 platform-tools\adb remount
 if exist bootanimation.zip platform-tools\adb push bootanimation.zip /system/media/
