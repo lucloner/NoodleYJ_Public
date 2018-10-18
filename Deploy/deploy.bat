@@ -14,11 +14,14 @@ platform-tools\adb install %1
 platform-tools\adb push %2 /sdcard/License.zip
 platform-tools\adb shell pm disable com.android.launcher3
 platform-tools\adb reboot
+echo 传送正常,注册成功后还需要再次重启才能使用
 goto :end
-
 :help
 	echo 本程序需要platform-tools\adb.exe,另外需要安装adb驱动
 	echo 请输入:deploy+空格+NoodleYJ安装包.apk+注册文件License.zip
-
+	pause
+	goto :over
 :end
 	echo deploy_OK
+	pause
+:over
