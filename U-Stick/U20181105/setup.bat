@@ -49,10 +49,10 @@ echo 连接成功开始部署
 	echo adb未找到！
 :help
 	echo 错误！
-	echo 请输入:deploy+空格+远程设备地址或USB+空格+NoodleYJ安装包.apk或NOAPK+注册文件License.zip
-	echo 举例:deploy 192.168.1.50
-	echo 举例:deploy 192.168.1.50 NoodleYJ.apk License.zip
-	echo 举例:deploy USB NOAPK License.zip
+	echo 请输入:setup+空格+远程设备地址或USB+空格+NoodleYJ安装包.apk或NOAPK+注册文件License.zip
+	echo 举例:setup 192.168.1.50
+	echo 举例:setup 192.168.1.50 NoodleYJ.apk License.zip
+	echo 举例:setup USB NOAPK License.zip USB连接,跳过安装,仅注册
 	goto :over
 :end
 	echo 部署完成如需要在线注册请于设备上输入序列号并选择在线激活,(激活后需要重启)
