@@ -59,4 +59,4 @@ echo 连接成功开始部署
 	echo OK！
 :over
 	echo 按任意键退出...
-	pause
+	pause > nul
