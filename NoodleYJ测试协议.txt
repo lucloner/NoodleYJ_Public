@@ -1,0 +1,56 @@
+NoodleYJ测试协议0.9
+
+一、基于ipmsg，具体7层以下方案参见其文档《ipmsg协议-基础》
+
+二、安卓端
+  a)  开机有上线信号
+  b)  广播设备指纹，ip，设备序列号
+例如：
+1569CC8D6F01FD361B46B19E2C274C7BD7|192.168.1.150|RYYZ-OKGE-OQKQ-W0ZW
+  c)  收到注册信号，返回ok，注册成功后向单ip发送信息，信息格式为：序列号|返回值|具体参数
+例如
+RYYZ-OKGE-OQKQ-W0ZW|ok|RYYZ-OKGE-OQKQ-W0ZW|REN|123456789|012345678
+  d)  有人脸通过时会发送pass和9位卡号，同时传输注册时使用的照片
+例如：（通过信息）
+RYYZ-OKGE-OQKQ-W0ZW|pass|123456789
+例如：（通过抓拍）
+RYYZ-OKGE-OQKQ-W0ZW|passhot|123456789
+  e)  人脸注册时，接收到人脸文件，经过处理注册，返回注册结果及人脸编号
+例如：
+RYYZ-OKGE-OQKQ-W0ZW|ok|123456789
+  f)  人脸删除时，返回delok，但注册时使用的人脸文件仍保存在缓存中不删除（再次上传会覆盖）。
+  g)  人脸进行列表操作时会返回html格式表格，命令举例：
+RYYZ-OKGE-OQKQ-W0ZW|listok|123456789
+  h)  操作失败时，命令举例：
+RYYZ-OKGE-OQKQ-W0ZW|failed|123456789
+ 
+三、PC端
+  a)  打开软件有上线信号：
+RYYZ-OKGE-OQKQ-W0ZW|FINDALL
+  b)  收到广播注册信号后，返回序列号注册设备
+例如：
+RYYZ-OKGE-OQKQ-W0ZW|OK
+  c)  注册人脸时，发送人脸文件到终端
+  d)  修改姓名时，发送修改命令到设备
+例如：
+RYYZ-OKGE-OQKQ-W0ZW|RENUSER|123456789|012345678 
+  e)  删除人脸时，发送删除命令和人脸编号到设备
+例如：
+RYYZ-OKGE-OQKQ-W0ZW|DELUSER|123456789
+  f)  保存配置，后为Java Object序列化字符串（由FaceConf.exe生成，含源码）
+RYYZ-OKGE-OQKQ-W0ZW|SAVECONFIG|rO0ABXVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAABFzcgARamF2YS5sYW5nLkludGVnZXIS4qCk94GHOAIAAUkABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAC0HNxAH4AAgAABQBzcQB+AAIAAABQc3EAfgACAAAAAnNxAH4AAgAAABRzcgARamF2YS5sYW5nLkJvb2xlYW7NIHKA1Zz67gIAAVoABXZhbHVleHAAc3EAfgAJAXNxAH4AAgAAAAFzcgAOamF2YS5sYW5nLkJ5dGWcTmCE7lD1HAIAAUIABXZhbHVleHEAfgADAXEAfgAOdAAAdAAPMjU1LjI1NS4yNTUuMjU1cQB+AAxzcQB+AAIAAAAAcQB+AAxzcQB+AAIAAAAic3EAfgACAAAABQ==
+  g) 设备人脸拍照捕获：
+RYYZ-OKGE-OQKQ-W0ZW|SHOTNREG
+  h)  列出已注册人脸：
+RYYZ-OKGE-OQKQ-W0ZW|LISTUSER
+  i)  列出识别记录：
+RYYZ-OKGE-OQKQ-W0ZW|LISTSQL1
+
+四、文件传送
+  文件传送为TCP协议，根据IPMSG底层规定，文件传送由UDP包发起，发起端处于TCP侦听状态，收到方尝试获取文件（可断点续传）本软件受限于系统本身，每次传送单个文件，多个文件为多次侦听，不能并行。
+
+五、卡号唯一性说明
+  a)  每一张照片（注意不是人脸）会有单独的卡号ID生成，卡号生成规则
+照片MD5-->随机数表(固定)-->数据库按顺序中唯一标准尝试-->第一个符合的卡号ID
+  b)  每张照片会产生独立的随机数表，种子取值为Long
+  c)  卡号ID的取值范围为 1-2147483646
