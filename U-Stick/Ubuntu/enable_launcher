@@ -1,0 +1,4 @@
+platform-tools/adb root
+platform-tools/adb shell pm enable com.android.launcher3
+
+

@@ -1,0 +1,4 @@
+platform-tools/adb connect $1
+platform-tools/adb devices
+
+

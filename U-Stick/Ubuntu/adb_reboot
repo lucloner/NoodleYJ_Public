@@ -1,0 +1,2 @@
+platform-tools/adb reboot
+./adb_connect $1
