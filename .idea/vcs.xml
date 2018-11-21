@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/android_baiduFaceSDK_apk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/android_ipmsg_apk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/js_ipmsg_untested" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/macOS_ipmsg_untested" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/python3_ipmsg_console" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vcpp_ipmsg_offical" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/win_ipmsg_dotnet2" vcs="Git" />
+  </component>
+</project>
